@@ -1,0 +1,19 @@
+
+
+Welcome to my word search generator game!
+Follow the instructions below to start playing :)
+
+----------------------- How to play -----------------------
+
+- You will be asked to guess a word from the word search board or if you've
+entered 'FINISHED'.
+
+- If you would like to stop the game at any point enter 'FINISH'.
+
+- You will score points for any word entered within 60 seconds of the game
+starting.
+
+- The points are calculated based on the combined length of all the words
+you have found.
+
+Good Luck!
