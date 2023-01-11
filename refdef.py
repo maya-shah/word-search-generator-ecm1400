@@ -14,8 +14,6 @@ List of functions created in this module:
 
 import random
 import string
-# from pprint import pprint
-
 
 def create_word_search(grid_size, handle):
     """
@@ -37,24 +35,19 @@ def create_word_search(grid_size, handle):
     file.close()
 
     word_list = []
-    select_word = False
 
     # this loop chooses a list of words from the handle then puts it into an empty list,
-    # wordList, that has the maximum length of
+    # word_list, that has the maximum length of
     # the grid_size-2 and chooses the grid_size//2 for the amount of words
     for word in range(grid_size // 2):
-        while not select_word:
-            word = random.choice(words).upper().replace("\n", '')
-            if len(word) <= grid_size - 2:
-                word_list.append(word)
-                select_word = True
-            else:
-                select_word = False
+        word_choice = random.choice(words).upper().replace("\n", '')
+        while len(word_choice) > grid_size - 2:
+            word_choice = random.choice(words).upper().replace("\n", '')
+        word_list.append(word_choice)
 
-    # If you want to print the list of words that are inside the matrix, then use this statement to do so:
-    # pprint(wordList, '\n')
-    # If you want to make this game harder for the user, then don't use this statement.
-
+    # If you want to make this game harder for the user, then comment out this line.
+    # Prints the list of words in the word search.
+    print(word_list, '\n')
 
     grid = [['_' for _ in range(grid_size)] for _ in range(grid_size)]
 
